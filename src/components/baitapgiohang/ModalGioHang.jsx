@@ -27,7 +27,11 @@ export default class ModalGioHang extends Component {
           onCancel={() => this.setState({ visible: false })}
           width={1000}
         >
-          <Table dataSource={[...gioHang]} rowKey="maSP">
+          <Table
+            dataSource={[...gioHang]}
+            rowKey="maSP"
+            pagination={{ pageSize: 4 }}
+          >
             <Column title="Mã SP" dataIndex="maSP" key="Mã sản phẩm" />
             <Column
               title="Hình ảnh"
