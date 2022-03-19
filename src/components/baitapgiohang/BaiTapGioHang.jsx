@@ -1,7 +1,8 @@
 import React, { Component } from "react";
 import ModalGioHang from "./ModalGioHang";
 import DanhSachSanPham from "./DanhSachSanPham";
-import phoneData from "../../data/phoneData.json";
+// import phoneData from "../../data/phoneData.json";
+import  {dataBaiTapGioHang}  from "../../data/dataDT.js";
 export default class BaiTapGioHang extends Component {
   constructor(props) {
     super(props);
@@ -30,10 +31,10 @@ export default class BaiTapGioHang extends Component {
 
   themGioHang = (sanPhamChon) => {
     let spGioHang = {
-      maSP: sanPhamChon.maSP,
-      tenSP: sanPhamChon.tenSP,
-      giaBan: sanPhamChon.giaBan,
-      hinhAnh: sanPhamChon.hinhAnh,
+      maSP: sanPhamChon.id,
+      tenSP: sanPhamChon.name,
+      giaBan: sanPhamChon.price,
+      hinhAnh: sanPhamChon.thumbnail_url,
       soLuong: 1,
     };
     let gioHangCapNhat = [...this.state.gioHang];
@@ -59,7 +60,7 @@ export default class BaiTapGioHang extends Component {
           tangGiam={this.tangGiam}
         />
         <DanhSachSanPham
-          mangSanPham={phoneData}
+          mangSanPham={dataBaiTapGioHang}
           themGioHang={this.themGioHang}
         />
       </div>

@@ -3,12 +3,15 @@ import { Card, Button } from "antd";
 
 export default class SanPhamGioHang extends Component {
   render() {
-    const { sanPham, themGioHang } = this.props;
+    const { themGioHang, sanPham } = this.props;
+    const { thumbnail_url, name, price } = this.props.sanPham;
+
     return (
       <div className="site-card-border-less-wrapper text-center">
         <Card bordered={true} style={{ width: 300 }}>
-          <img src={sanPham.hinhAnh} alt="sanpham" />
-          <p>{sanPham.tenSP}</p>
+          <img src={thumbnail_url} alt="sanpham" />
+          <p className="text-primary">{name}</p>
+          <p className="text-secondary">{price.toLocaleString()}</p>
           <Button type="primary" onClick={() => themGioHang(sanPham)}>
             Thêm giỏ hàng
           </Button>

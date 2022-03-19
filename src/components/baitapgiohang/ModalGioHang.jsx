@@ -42,6 +42,7 @@ export default class ModalGioHang extends Component {
               title="Số lượng"
               dataIndex="soLuong"
               key="Số Lượng"
+              width={170}
               render={(text, row) => (
                 <>
                   <Button onClick={() => tangGiam(row["maSP"] * -1)}>-</Button>
