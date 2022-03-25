@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/BaiTapGioHang/static/css/main.60637fef.css",
+    "main.js": "/BaiTapGioHang/static/js/main.524d65b1.js",
+    "index.html": "/BaiTapGioHang/index.html",
+    "main.60637fef.css.map": "/BaiTapGioHang/static/css/main.60637fef.css.map",
+    "main.524d65b1.js.map": "/BaiTapGioHang/static/js/main.524d65b1.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.60637fef.css",
+    "static/js/main.524d65b1.js"
+  ]
+}
